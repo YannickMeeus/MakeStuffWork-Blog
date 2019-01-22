@@ -1,0 +1,25 @@
+- id: Ghost
+  avatar: avatars/ghost.png
+  bio: The professional publishing platform
+  twitter: TryGhost
+  facebook: ghost
+  website: https://ghost.org/
+  location: On a plane
+- id: Another Author
+  avatar: avatars/ghost.png
+  bio: This is another test author with a profile background image
+  twitter: TryGhost
+  facebook: ghost
+  website: https://ghost.org/
+  location: On a plane
+  profile_image: img/alex-knight-326705-unsplash.jpg
+- id: Yannick Meeus
+  avatar: avatars/ghost.png
+  bio: |
+    As a young boy, I was always interested in stuff, building stuff, breaking stuff - the latter more
+    than the former to be fair.
+  twitter: yannickmeeus
+  facebook: yannick.meeus
+  website: https://makestuffwork.online
+  location: Helsinki, Finland
+  profile_image: img/alex-knight-326705-unsplash.jpg
