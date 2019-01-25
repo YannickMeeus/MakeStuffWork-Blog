@@ -130,7 +130,7 @@ const IndexPage: React.FunctionComponent<IndexProps> = props => {
           <div className={`${inner}`}>
             <SiteHeaderContent>
               <SiteTitle>
-                {props.data.logo ? (
+                {config.logo ? (
                   <img
                     style={{ maxHeight: '45px' }}
                     src={props.data.logo.childImageSharp.fixed.src}
