@@ -2,14 +2,13 @@
 import { Link } from 'gatsby';
 import * as React from 'react';
 import styled from '@emotion/styled';
-import { css } from 'emotion';
+import { css } from '@emotion/core';
 
 import { SocialLink } from '../../styles/shared';
 import config from '../../website-config';
 import Facebook from '../icons/facebook';
 import Twitter from '../icons/twitter';
-import SubscribeModal from '../subsribe/SubscribeOverlay';
-import SiteNavLogo from './SiteNavLogo';
+import SubscribeModal from '../subscribe/SubscribeOverlay';
 
 const HomeNavRaise = css`
   @media (min-width: 900px) {
@@ -136,27 +135,21 @@ class SiteNav extends React.Component<SiteNavProps, SiteNaveState> {
   render() {
     const { isHome = false } = this.props;
     return (
-      <nav className={`${isHome ? HomeNavRaise : ''} ${SiteNavStyles}`}>
+      <nav css={[isHome && HomeNavRaise, SiteNavStyles]}>
         <SiteNavLeft>
-          {!isHome && <SiteNavLogo />}
-          <ul className={`${NavStyles}`} role="menu">
+          {/* {!isHome && <SiteNavLogo />} */}
+          <ul css={NavStyles} role="menu">
             {/* TODO: mark current nav item - add class nav-current */}
             <li role="menuitem">
               <Link to="/">Home</Link>
             </li>
-            {/* <li role="menuitem">
-              <Link to="/about">About</Link>
-            </li>
-            <li role="menuitem">
-              <Link to="/tags/getting-started/">Getting Started</Link>
-            </li> */}
           </ul>
         </SiteNavLeft>
         <SiteNavRight>
           <SocialLinks>
             {config.facebook && (
               <a
-                className={`${SocialLink}`}
+                css={SocialLink}
                 href={config.facebook}
                 target="_blank"
                 title="Facebook"
@@ -167,7 +160,7 @@ class SiteNav extends React.Component<SiteNavProps, SiteNaveState> {
             )}
             {config.twitter && (
               <a
-                className={`${SocialLink}`}
+                css={SocialLink}
                 href={config.twitter}
                 title="Twitter"
                 target="_blank"

@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby';
 import * as React from 'react';
-import { css } from 'emotion';
+import { css } from '@emotion/core';
 import Helmet from 'react-helmet';
 
 import Footer from '../components/Footer';
@@ -88,7 +88,7 @@ const IndexPage: React.FunctionComponent<IndexProps> = props => {
   const width = props.data.header.childImageSharp.fluid.sizes.split(', ')[1].split('px')[0];
   const height = String(Number(width) / props.data.header.childImageSharp.fluid.aspectRatio);
   return (
-    <IndexLayout className={`${HomePosts}`}>
+    <IndexLayout css={HomePosts}>
       <Helmet>
         <html lang={config.lang} />
         <title>{config.title}</title>
@@ -122,32 +122,24 @@ const IndexPage: React.FunctionComponent<IndexProps> = props => {
       </Helmet>
       <Wrapper>
         <header
-          className={`${SiteHeader} ${outer}`}
+          css={[outer, SiteHeader]}
           style={{
             backgroundImage: `url('${props.data.header.childImageSharp.fluid.src}')`,
           }}
         >
-          <div className={`${inner}`}>
+          <div css={inner}>
             <SiteHeaderContent>
               <SiteTitle>
-                {config.logo ? (
-                  <img
-                    style={{ maxHeight: '45px' }}
-                    src={props.data.logo.childImageSharp.fixed.src}
-                    alt={config.title}
-                  />
-                ) : (
-                  config.title
-                )}
+                  {config.title}
               </SiteTitle>
               <SiteDescription>{config.description}</SiteDescription>
             </SiteHeaderContent>
             <SiteNav isHome={true} />
           </div>
         </header>
-        <main id="site-main" className={`${SiteMain} ${outer}`}>
-          <div className={`${inner}`}>
-            <div className={`${PostFeed} ${PostFeedRaise}`}>
+        <main id="site-main" css={[SiteMain, outer]}>
+          <div css={inner}>
+            <div css={[PostFeed, PostFeedRaise]}>
               {props.data.allMarkdownRemark.edges.map(post => {
                 // filter out drafts in production
                 return (
