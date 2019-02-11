@@ -1,3 +1,8 @@
 - id: meta
   description: A post about the blog, about posting, about blogging
   image: img/computer.jpg
+- id: getting-started
+  description: For when 'hello world' is exactly what you need
+  image: tag-getting-started.jpg
+- id: scala
+  description: The Scala programming language, as designed by Martin Odersky. Functional, sorta, object-oriented, vaguely, a combination of every paradigm under the sun, possibly.
