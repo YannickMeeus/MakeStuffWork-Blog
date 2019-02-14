@@ -3,6 +3,7 @@
   image: img/computer.jpg
 - id: getting-started
   description: For when 'hello world' is exactly what you need
-  image: tag-getting-started.jpg
+  image: img/tag-getting-started.jpg
 - id: scala
   description: The Scala programming language, as designed by Martin Odersky. Functional, sorta, object-oriented, vaguely, a combination of every paradigm under the sun, possibly.
+  image: omg/tag-scala-spiral.png
