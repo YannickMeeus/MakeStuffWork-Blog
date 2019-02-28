@@ -1,7 +1,7 @@
 ---
 layout: post
 title: From .NET to Scala - Reading a configuration value
-image: img/building-blocks.jpg
+image: img/black-gears.jpg
 author: Yannick Meeus
 draft: false
 date: 2017-08-15T10:58:14.000Z
