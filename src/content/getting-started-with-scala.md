@@ -11,7 +11,6 @@ tags:
   - archive
 ---
 
-
 I have been racking my brain as to how to start learning a new language from
 scratch. It's one of the first times I've had to learn a new language on a new
 platform for years, and my experience on the .NET stack influences everything I do,
