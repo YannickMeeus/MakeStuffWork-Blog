@@ -6,4 +6,7 @@
   image: img/tag-getting-started.jpg
 - id: scala
   description: The Scala programming language, as designed by Martin Odersky. Functional, sorta, object-oriented, vaguely, a combination of every paradigm under the sun, possibly.
-  image: omg/tag-scala-spiral.png
+  image: img/tag-scala-spiral.png
+- id: database-access
+  description: We do - on occasion - have to store stuff in a database. These articles will elaborate on how or why to even consider such a thing.
+  image: img/filing-cabinets.jpg
