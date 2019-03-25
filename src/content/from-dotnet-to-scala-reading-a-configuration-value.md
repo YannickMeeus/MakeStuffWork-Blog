@@ -4,7 +4,7 @@ title: From .NET to Scala - Reading a configuration value
 image: img/black-gears.jpg
 author: Yannick Meeus
 draft: false
-date: 2017-08-15T10:58:14.000Z
+date: 2017-09-12T09:58:09.000Z
 tags: 
   - scala
   - getting-started
