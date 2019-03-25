@@ -52,14 +52,17 @@ we are back in functional land and can deal with missing values in a more elegan
 Let’s say we run:
 
 ```scala
-  val c = config.as[Option[String]](“TotallyNotAConfigurationKey”)
-  println(s"Default Value: ${c.getOrElse(“Value Not Found”)}")
+val c = config.as[Option[String]](“TotallyNotAConfigurationKey”)
+println(s"Default Value: ${c.getOrElse(“Value Not Found”)}")
+
 //> Default Value: Value Not Found
 ```
-  That seems a lot cleaner compared to having to catch an exception,
+
+That seems a lot cleaner compared to having to catch an exception,
 handling the outcome, defaulting a value declared in an outer scope, etc.
 Ficus also supports parsing out arbitrary types as the type parameter:
-  ```scala
+
+```scala
 // application.conf contains the following entry:
 // ComplexEntryWithVariousTypes = {
 //    TextualEntry = “This is a complex Entry”,
@@ -67,11 +70,14 @@ Ficus also supports parsing out arbitrary types as the type parameter:
 // }
 case class ComplexEntry(TextualEntry : String, NumericEntry : Int)
 object EntryPoint extends App {
-    val config = ConfigFactory.load()
-  val complexEntry = config.as[ComplexEntry](“ComplexEntryWithVariousTypes”)
-  println(s"Complex Entry represented as a Type, TextualEntry: ${complexEntry.TextualEntry} - NumericEntry: ${complexEntry.NumericEntry}")
-//> Complex Entry represented as a Type, TextualEntry: This is a complex Entry - NumericEntry: 1254
+  val config = ConfigFactory.load()
+  val complexEntry = config.as[ComplexEntry]("ComplexEntryWithVariousTypes")
+  
+  println(s"Complex Entry represented as a Type, TextualEntry: ${complexEntry.TextualEntry} - NumericEntry: ${complexEntry.NumericEntry}")
+  
+  //> Complex Entry represented as a Type, TextualEntry: This is a complex Entry - NumericEntry: 1254
 }
 ```
+
 I’ve put together some examples on [GitHub](https://github.com/YannickMeeus/me.meeus.spikes.configuration/tree/FicusExample),
-  have a look and, if you find anything awry with it, just raise an issue against it and I’ll have a look.
+have a look and, if you find anything awry with it, just raise an issue against it and I’ll have a look.

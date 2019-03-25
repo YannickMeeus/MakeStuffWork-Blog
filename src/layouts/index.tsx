@@ -3,6 +3,13 @@ import { darken, lighten } from 'polished';
 import * as React from 'react';
 import Helmet from 'react-helmet';
 
+// tslint:disable:no-import-side-effect
+import 'prismjs'
+import 'prism-themes/themes/prism-darcula.css'
+import 'prismjs/components/prism-java.js';
+import 'prismjs/components/prism-scala.js';
+// tslint:enable:no-import-side-effect
+
 import { colors } from '../styles/colors';
 // @ts-ignore
 import favicon from '../../src/favicon.ico';
