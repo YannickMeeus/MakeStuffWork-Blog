@@ -35,7 +35,7 @@
     "gatsby-plugin-offline": "2.0.25",
     "gatsby-plugin-postcss": "2.0.7",
     "gatsby-plugin-react-helmet": "3.0.11",
-    "gatsby-plugin-sharp": "2.0.30",
+    "gatsby-plugin-sharp": "2.0.31",
     "gatsby-plugin-typescript": "2.0.11",
     "gatsby-remark-abbr": "1.0.0",
     "gatsby-remark-copy-linked-files": "2.0.11",
