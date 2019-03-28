@@ -30,7 +30,7 @@ a [clear API](https://github.com/typesafehub/config#api-example).
 So, let’s see this library in action. I started out with a simple SBT project, willed
 into existence using `sbt new` and the [scala-seed giter8 template](https://github.com/scala/scala-seed.g8)
 
-```sbt
+```
 sbt new scala/scala-seed.g8
 ```
 
@@ -43,7 +43,7 @@ file for now.
 Speaking of which, this is how I add the dependency to
 `config` in `build.sbt`:
 
-```sbt
+```
 libraryDependencies += “com.typesafe” % “config” % “1.3.1”
 ```
 
