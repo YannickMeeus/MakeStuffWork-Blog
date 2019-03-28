@@ -10,3 +10,9 @@
 - id: database-access
   description: We do - on occasion - have to store stuff in a database. These articles will elaborate on how or why to even consider such a thing.
   image: img/filing-cabinets.jpg
+- id: bite-size
+  description: For when a paragraph is enough. These are usually more notes to myself.
+  image: img/tag-bite-size.jpg
+- id: tooling
+  description: There are metric ton of tools out there in our industry, this article will talk about *at least* one of them.
+  image: img/tag-tooling
