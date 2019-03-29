@@ -31,7 +31,7 @@ keeping my repositories clean, I ~~COMPLETELY AND ON MY OWN~~ adapted
 a quick command I found [here](https://coderwall.com/p/eis0ba/remove-a-thousand-stale-remote-branches-on-git):
 
 ```bash
-git branch -r | awk -F/ '/\/greenkeeper-/{print $2"/"$3}' | xargs -I {} git push origin :{}
+git branch -r | awk -F/ '/\/greenkeeper/{print $2"/"$3}' | xargs -I {} git push origin :{}
 ```
 
 It is slow, but glorious to see branch after branch get nuked into oblivion.
