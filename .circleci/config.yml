@@ -29,5 +29,9 @@ jobs:
       - run: npm run build
 
       - run:
+          name: Install Zeit Now (CLI)
+          command: npm install -g now
+      - run:
           name: Deploy the site
-          command: echo $now_token | npm run push:online -- --token xargs
+          command: |
+            echo $now_token | npm run push:online -- --token xargs
