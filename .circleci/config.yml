@@ -30,4 +30,4 @@ jobs:
 
       - run:
           name: Deploy the site
-          command: npm run push:online -- --token $now_token
+          command: echo $now_token | npm run push:online -- --token xargs
