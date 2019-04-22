@@ -15,4 +15,10 @@
   image: img/tag-bite-size.jpg
 - id: tooling
   description: There are metric ton of tools out there in our industry, this article will talk about *at least* one of them.
-  image: img/tag-tooling
+  image: img/tag-tooling.jpg
+- id: docker
+  description: |
+    It's the 'new' kid on the block, and it's here to stay - for a while at least.
+    This way of packaging up entire stacks is proving to be more than useful, but downright essential
+    in this day and age.
+  image: img/docker-main-image.png
