@@ -32,6 +32,16 @@ jobs:
           name: Install Zeit Now (CLI)
           command: npm install now
       - run:
-          name: Deploy the site
+          name: Deploy to Staging
           command: |
             npm run push:online -- --token $now_token
+
+      - run:
+          name: Map to Production
+          command: |
+            if [ "$CIRCLE_BRANCH" == "master" ];
+            then
+              npm run swap:live -- --token $now_token
+            else
+              echo "SKIP - Not publishing to production for a PR"
+            fi
