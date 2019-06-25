@@ -8,7 +8,7 @@
   "scripts": {
     "build": "gatsby build",
     "push:online": "now public/",
-    "swap:live": "now alias set makestuffwork-site.meeus.now.sh blog.makestuffwork.online",
+    "swap:live": "now public/ --target production",
     "boom": "npm run clean && npm run build && npm run push:online",
     "clean": "rimraf public && rimraf .cache",
     "dev": "gatsby develop",
