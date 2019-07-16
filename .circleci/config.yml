@@ -34,8 +34,13 @@ jobs:
       - run:
           name: Deploy to Staging
           command: |
-            npm run push:online -- --token $now_token
-
+            if [ "$CIRCLE_BRANCH" == "master" ];
+            then
+              echo "SKIP - Not publishing to staging for master merge"
+            else
+              npm run push:online -- --token $now_token
+            fi
+          
       - run:
           name: Map to Production
           command: |
